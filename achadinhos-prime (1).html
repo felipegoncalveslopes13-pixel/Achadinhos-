@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Achadinhos Prime</title>
+<meta name="description" content="Achadinhos selecionados do Mercado Livre. Veja as ofertas e compre direto no Mercado Livre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f4f2;--card:#fff;--ink:#141414;--mut:#6b6b68;--line:#e0e0dc;--y:#ffd91a;--yink:#141414;--bar:#141414;--bart:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1b1b1a;--card:#262625;--ink:#f3f3f0;--mut:#a5a5a0;--line:#3a3a38;--bar:#0e0e0e}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1b1b1a;--card:#262625;--ink:#f3f3f0;--mut:#a5a5a0;--line:#3a3a38;--bar:#0e0e0e}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "DM Sans",system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{background:var(--bar);color:var(--bart)}
+.top{display:flex;align-items:center;gap:12px;padding:14px 0 10px}
+.logo{font-weight:800;font-size:1.35rem;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;text-decoration:none}
+.mark{background:var(--y);color:#141414;width:34px;height:34px;border-radius:9px 9px 9px 2px;display:grid;place-items:center;font-size:1.1rem}
+.search{padding:0 0 14px}
+.search input{width:100%;border:0;border-radius:12px;padding:13px 16px;font:inherit;background:#fff;color:#141414}
+.strip{height:6px;background:repeating-linear-gradient(135deg,var(--y) 0 14px,#141414 14px 28px)}
+.hero{padding:26px 0 8px}
+.hero h1{font-size:clamp(1.7rem,6vw,2.7rem);line-height:1.05;font-weight:800;letter-spacing:-.025em;max-width:16ch}
+.hero p{color:var(--mut);margin:10px 0 0;max-width:46ch}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 16px;margin:0 -16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:8px 14px;font:500 .9rem "DM Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--y);color:#141414;border-color:var(--y);font-weight:700}
+section{padding:18px 0 6px}
+section>h2{font-size:1.35rem;font-weight:800;margin-bottom:12px;padding-left:12px;border-left:6px solid var(--y)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.img{aspect-ratio:1;background:#e9e9e4;display:grid;place-items:center;font-size:2.6rem;position:relative;cursor:pointer;border:0;padding:0;width:100%;color:#141414}
+.img img{width:100%;height:100%;object-fit:contain;background:#fff}
+.off{position:absolute;top:8px;left:8px;background:var(--y);color:#141414;font-weight:800;font-size:.8rem;padding:3px 8px;border-radius:6px 6px 6px 0}
+.body{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cat{font-size:.78rem;color:var(--mut)}
+.name{font:700 .98rem/1.25 "DM Sans",sans-serif;margin:0}
+.old{font-size:.82rem;color:var(--mut);text-decoration:line-through}
+.price{font:800 1.3rem "Bricolage Grotesque","DM Sans",sans-serif}
+.row{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.btn{flex:1;text-align:center;text-decoration:none;background:var(--y);color:#141414;font-weight:700;font-size:.9rem;padding:11px 10px;border-radius:10px;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(.95)}
+.ico{flex:none;width:44px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;cursor:pointer;font-size:1rem}
+.empty{border:2px dashed var(--line);border-radius:14px;padding:26px 18px;color:var(--mut);text-align:center}
+.empty b{color:var(--ink)}
+footer{background:var(--bar);color:var(--bart);margin-top:34px;padding:26px 0 30px;font-size:.9rem}
+footer a{color:var(--y)}
+footer p{margin:6px 0;max-width:62ch;color:#d4d4d0}
+.links{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
+dialog{border:0;border-radius:16px;padding:20px;max-width:min(520px,92vw);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .x{float:right;border:0;background:var(--line);color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem}
+dialog h2{font-size:1.3rem;margin-bottom:8px}
+dialog .pimg{aspect-ratio:1;max-height:260px;margin:10px auto;display:grid;place-items:center;font-size:4rem;background:#e9e9e4;border-radius:12px;color:#141414;overflow:hidden}
+dialog .pimg img{width:100%;height:100%;object-fit:contain;background:#fff}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#141414;color:#fff;padding:10px 16px;border-radius:999px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s;border:1px solid var(--y)}
+.toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><a class="logo" href="#"><span class="mark" aria-hidden="true">⚡</span>Achadinhos Prime</a></div>
+    <form class="search" role="search" onsubmit="return false"><input id="q" type="search" placeholder="Buscar produtos" aria-label="Buscar produtos" autocomplete="off"></form>
+  </div>
+  <div class="strip" aria-hidden="true"></div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Achadinhos selecionados do Mercado Livre</h1>
+    <p>Veja a oferta aqui e finalize a compra no Mercado Livre. Confira sempre o preço atual na página do produto.</p>
+  </div>
+  <nav class="chips" id="chips" aria-label="Categorias"></nav>
+  <div id="sections"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Achadinhos Prime</div>
+    <p><b>Aviso de afiliados:</b> este site usa links de afiliados. Posso receber uma comissão por compras elegíveis feitas por eles, sem custo extra para você. As compras são feitas no Mercado Livre, e os preços e a disponibilidade podem mudar a qualquer momento.</p>
+    <div class="links"><a href="#privacidade" data-open="privacidade">Privacidade</a><a href="#contato" data-open="contato">Contato</a></div>
+    <p>Este site não é afiliado oficial nem é operado pelo Mercado Livre.</p>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dt"><button class="x" aria-label="Fechar" id="close">✕</button><div id="dc"></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== 1. CONFIGURAÇÃO — edite aqui ===== */
+var CONFIG = {
+  contatoEmail: "seu-email@exemplo.com",   // troque pelo seu e-mail
+  instagram: "@seuperfil"                  // troque pelo seu perfil
+};
+
+/* ===== 2. CATEGORIAS ===== */
+var CATEGORIAS = [
+  {id:"tecnologia", nome:"Tecnologia", icone:"📱"},
+  {id:"games", nome:"Games", icone:"🎮"},
+  {id:"casa", nome:"Casa e decoração", icone:"🏠"},
+  {id:"moda", nome:"Moda e acessórios", icone:"👟"},
+  {id:"esportes", nome:"Esportes", icone:"⚽"},
+  {id:"beleza", nome:"Beleza", icone:"💄"},
+  {id:"variadas", nome:"Ofertas variadas", icone:"🎁"}
+];
+
+/* ===== 3. PRODUTOS — adicione os seus aqui =====
+Copie o modelo abaixo, cole dentro da lista e preencha com dados reais.
+{
+  id: "fone-bluetooth-x",          // sem espaços; vira o link compartilhável (#fone-bluetooth-x)
+  nome: "Nome do produto",
+  preco: 99.90,                    // preço atual verificado
+  precoAnterior: 129.90,           // opcional: só se for confirmado (senão apague a linha)
+  descricao: "Frase curta sobre o produto.",
+  categoria: "tecnologia",         // um id da lista de categorias
+  imagem: "",                      // opcional: ver README (precisa ser data: URI nesta hospedagem)
+  link: "COLE_AQUI_SEU_LINK_DE_AFILIADO",
+  destaque: true,                  // aparece em "Ofertas em destaque"
+  popular: false,                  // aparece em "Populares"
+  novo: false,                     // aparece em "Novidades"
+  publicado: true                  // false = esconde do site
+},
+*/
+var PRODUTOS = [
+
+];
+
+/* ===== Código do site (não precisa mexer) ===== */
+var $ = function(s){return document.querySelector(s)};
+var estado = {cat:"todas", q:""};
+var brl = function(n){return Number(n).toLocaleString("pt-BR",{style:"currency",currency:"BRL"})};
+var esc = function(s){var d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML};
+var catDe = function(id){return CATEGORIAS.filter(function(c){return c.id===id})[0]||CATEGORIAS[CATEGORIAS.length-1]};
+var linkOk = function(u){return /^https:\/\//.test(u||"")};
+
+function validos(){
+  return PRODUTOS.filter(function(p){
+    return p && p.publicado!==false && p.id && p.nome && typeof p.preco==="number" && p.preco>=0;
+  });
+}
+function desconto(p){
+  if(typeof p.precoAnterior==="number" && p.precoAnterior>p.preco){
+    return Math.round((1-p.preco/p.precoAnterior)*100);
+  }
+  return 0;
+}
+function filtrar(lista){
+  var q=estado.q.trim().toLowerCase();
+  return lista.filter(function(p){
+    var okCat = estado.cat==="todas"||p.categoria===estado.cat;
+    var okQ = !q || (p.nome+" "+(p.descricao||"")).toLowerCase().indexOf(q)>-1;
+    return okCat && okQ;
+  });
+}
+function card(p){
+  var c=catDe(p.categoria), d=desconto(p);
+  var img = p.imagem ? '<img src="'+esc(p.imagem)+'" alt="'+esc(p.nome)+'" loading="lazy">' : '<span aria-hidden="true">'+c.icone+'</span>';
+  var btn = linkOk(p.link)
+    ? '<a class="btn" href="'+esc(p.link)+'" target="_blank" rel="sponsored noopener noreferrer">Ver oferta no Mercado Livre</a>'
+    : '<button class="btn" data-open-prod="'+esc(p.id)+'">Ver detalhes</button>';
+  return '<article class="card"><button class="img" data-open-prod="'+esc(p.id)+'" aria-label="Detalhes de '+esc(p.nome)+'">'+img+(d?'<span class="off">-'+d+'%</span>':'')+'</button>'+
+    '<div class="body"><span class="cat">'+esc(c.nome)+'</span><h3 class="name">'+esc(p.nome)+'</h3>'+
+    (d?'<span class="old">'+brl(p.precoAnterior)+'</span>':'')+'<span class="price">'+brl(p.preco)+'</span>'+
+    '<div class="row">'+btn+'<button class="ico" data-share="'+esc(p.id)+'" aria-label="Compartilhar">↗</button></div></div></article>';
+}
+function bloco(titulo,lista){
+  if(!lista.length) return "";
+  return '<section><h2>'+titulo+'</h2><div class="grid">'+lista.map(card).join("")+'</div></section>';
+}
+function render(){
+  var chips='<button class="chip" aria-pressed="'+(estado.cat==="todas")+'" data-cat="todas">Todas</button>'+
+    CATEGORIAS.map(function(c){return '<button class="chip" aria-pressed="'+(estado.cat===c.id)+'" data-cat="'+c.id+'">'+c.icone+' '+esc(c.nome)+'</button>'}).join("");
+  $("#chips").innerHTML=chips;
+
+  var todos=validos();
+  var out="";
+  if(!todos.length){
+    out='<div class="empty"><b>Nenhum produto publicado ainda.</b><br>Abra o arquivo, procure a lista <code>PRODUTOS</code> e adicione o primeiro produto seguindo o modelo.</div>';
+  } else {
+    var f=filtrar(todos);
+    if(!f.length){
+      out='<div class="empty"><b>Nada encontrado.</b><br>Tente outra palavra ou escolha outra categoria.</div>';
+    } else if(estado.q.trim()||estado.cat!=="todas"){
+      out=bloco("Resultados",f);
+    } else {
+      out+=bloco("Ofertas em destaque",f.filter(function(p){return p.destaque}));
+      out+=bloco("Populares",f.filter(function(p){return p.popular}));
+      out+=bloco("Novidades",f.filter(function(p){return p.novo}));
+      var resto=f.filter(function(p){return !p.destaque&&!p.popular&&!p.novo});
+      out+=bloco(f.length>resto.length?"Mais achadinhos":"Achadinhos",resto);
+    }
+  }
+  $("#sections").innerHTML=out;
+}
+
+/* diálogo + links compartilháveis (#id-do-produto) */
+var dlg=$("#dlg");
+function abrir(html){$("#dc").innerHTML=html; if(!dlg.open) dlg.showModal();}
+function abrirProduto(id){
+  var p=validos().filter(function(x){return x.id===id})[0]; if(!p) return false;
+  var c=catDe(p.categoria), d=desconto(p);
+  var img=p.imagem?'<img src="'+esc(p.imagem)+'" alt="'+esc(p.nome)+'">':'<span aria-hidden="true">'+c.icone+'</span>';
+  abrir('<span class="cat">'+esc(c.nome)+'</span><h2 id="dt">'+esc(p.nome)+'</h2><div class="pimg">'+img+'</div>'+
+    (d?'<span class="old">'+brl(p.precoAnterior)+'</span> <b>-'+d+'%</b><br>':'')+'<span class="price">'+brl(p.preco)+'</span>'+
+    '<p>'+esc(p.descricao||"")+'</p><p class="cat">Preço informado na data da publicação. Confira o valor atual no Mercado Livre.</p>'+
+    '<div class="row">'+(linkOk(p.link)?'<a class="btn" href="'+esc(p.link)+'" target="_blank" rel="sponsored noopener noreferrer">Ver oferta no Mercado Livre</a>':'')+
+    '<button class="ico" data-share="'+esc(p.id)+'" aria-label="Compartilhar">↗</button></div>');
+  return true;
+}
+function abrirPagina(k){
+  if(k==="privacidade") abrir('<h2 id="dt">Política de privacidade</h2><p>Este site não pede cadastro nem coleta dados pessoais por conta própria. Ao clicar em uma oferta, você vai para o Mercado Livre, que tem sua própria política de privacidade e pode usar cookies para registrar a origem do clique.</p><p>Se o site passar a usar ferramentas de estatística ou anúncios, esta página será atualizada.</p>');
+  else abrir('<h2 id="dt">Contato</h2><p>Dúvidas, sugestões ou algum preço desatualizado?</p><p>E-mail: <a href="mailto:'+esc(CONFIG.contatoEmail)+'">'+esc(CONFIG.contatoEmail)+'</a><br>Instagram: '+esc(CONFIG.instagram)+'</p>');
+}
+function toast(t){var e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(function(){e.classList.remove("on")},1800)}
+function compartilhar(id){
+  var p=validos().filter(function(x){return x.id===id})[0]; if(!p) return;
+  var url=location.href.split("#")[0]+"#"+encodeURIComponent(id);
+  if(navigator.share){navigator.share({title:p.nome,text:p.nome+" por "+brl(p.preco),url:url}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast("Link copiado")},function(){toast(url)})}
+  else toast(url);
+}
+function rota(){
+  var h=decodeURIComponent(location.hash.slice(1));
+  if(!h) return;
+  if(h==="privacidade"||h==="contato") abrirPagina(h); else abrirProduto(h);
+}
+
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-cat],[data-share],[data-open-prod],[data-open]"); if(!t) return;
+  if(t.dataset.cat){estado.cat=t.dataset.cat;render()}
+  else if(t.dataset.share) compartilhar(t.dataset.share);
+  else if(t.dataset.openProd) abrirProduto(t.dataset.openProd);
+  else if(t.dataset.open){e.preventDefault();abrirPagina(t.dataset.open)}
+});
+$("#q").addEventListener("input",function(e){estado.q=e.target.value;render()});
+$("#close").addEventListener("click",function(){dlg.close()});
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+window.addEventListener("hashchange",rota);
+render();rota();
+</script>
+</body>
+</html>
